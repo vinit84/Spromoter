@@ -1,0 +1,3 @@
+Product Unique ID,Review Creation Date,Review Title,Review Content,Review Rating,Reviewer Name,Reviewer Email,Published,Comment Content (optional),Comment Creation Date (optional),Review Images URLs (optional)
+book-1,7/22/2020,Nice,Wow,5,Bilash,bilashcroy@gmail.com,true,reply 1,7/22/2020,"https://image.com/1.png, https://image.com/2.png"
+book-2,7/22/2020,Great,Great product ever,5,Bishwajit,bilashcroy@gmail.com,true,reply 1,7/22/2020,"https://image.com/1.png, https://image.com/2.png"

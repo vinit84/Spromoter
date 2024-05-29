@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Set deployment paths
+export DEPLOY_PATH=/www/wwwroot/reviews.spromoter.com
+export REPOSITORY_PATH=/www/repositories/spromoter
+
+# Execute deployment tasks as the www user
+#sudo -u www /www/server/php/81/bin/php $DEPLOY_PATH/artisan down
+sudo -u www cp -R -f $REPOSITORY_PATH/* $DEPLOY_PATH
+# shellcheck disable=SC2164
+cd $DEPLOY_PATH
+
+# Uncomment the line below if needed
+# sudo -u www /www/server/php/81/bin/php /usr/bin/composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
+
+#sudo -u www /www/server/php/81/bin/php artisan migrate --force
+#sudo -u www /www/server/php/81/bin/php artisan optimize:clear
+#sudo -u www /www/server/php/81/bin/php artisan storage:link
+#sudo -u www chmod -R 775 $DEPLOY_PATH/storage/logs/
+#sudo -u www chmod -R 775 $DEPLOY_PATH/storage/framework/
+#sudo -u www chmod -R 775 $DEPLOY_PATH/bootstrap/cache/
+#sudo -u www /www/server/php/81/bin/php $DEPLOY_PATH/artisan up
